@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Benchmark Fibonacci</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/28e658416b.js"></script>
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="actions">
+    <div>
+        <input type="number" min="0" value="0">
+        <button id="submit">Tester</button>
+    </div>
+    <div>
+        <button id="start">Démarrer un benchmark <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i></button>
+    </div>
+</div>
+<p>Cliquez sur une colonne pour la désactiver</p>
+<p>Fibonacci(1476) atteint les limites du type <code>number</code> de javascript, soit 1,797693134862315E + 308</p>
+    <div class="benchmark">
+        <div id="loop">
+            <h1>Par boucle</h1>
+            <p>Complexité: O(N)</p>
+            <p></p>
+            <div class="results"></div>
+        </div>
+        <div id="memory">
+            <h1>Par mémoire</h1>
+            <p>Complexité: O(2N)</p>
+            <p>Overstack possible au-delà de 6000</p>
+            <div class="results"></div>
+        </div>
+        <div id="recursive">
+            <h1>Par récursivité</h1>
+            <p>Complexité: O(2<sup>n</sup>)</p>
+            <p>automatiquement désactivé au-delà de 40</p>
+            <div class="results"></div>
+        </div>
+    </div>
+</body>
+</html>
